@@ -20,7 +20,7 @@ void main(void) {
 
 	locale::global(locale{ "fr-CA" });
 
-	NumberOfRolls = 1, Rolled1 = 0, Rolled2 = 0, Rolled3 = 0, Rolled4 = 0, Rolled5 = 0, Rolled6 = 0;
+	NumberOfRolls = 0, Rolled1 = 0, Rolled2 = 0, Rolled3 = 0, Rolled4 = 0, Rolled5 = 0, Rolled6 = 0;
 
 	for (int i = 0; i <= 6; i++)
 	{
@@ -62,14 +62,9 @@ void main(void) {
 
 		cout << '\n' << '\t' << '\t' << '\t' << "Pressez une touche pour continuez";
 
-		if (i < 6) {
-			_getch();
+		_getch();
 
-			clrscr();
-		}
-		else {
-			MessageBoxA(NULL, "AU REVOIR!", "Fin du programme", MB_OK | MB_ICONINFORMATION);
-		}
+		clrscr();
 	}
-
+	MessageBoxA(NULL, "AU REVOIR!", "Fin du programme", MB_OK | MB_ICONINFORMATION);
 }
